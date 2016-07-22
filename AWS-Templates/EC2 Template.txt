@@ -1,0 +1,30 @@
+{
+"AWSTemplateFormat" : "2010-09-09",
+"Description" : "This is my first Sample template",
+"Parameters" : {
+	"InstanceTypeParameter" : {
+		"Type" : "String",
+		"Default" : "t1.micro",
+		"AllowedValues" : ["t1.micro", "m1.micro", "m1.large"],
+		"Description" : "this is for default values. ti.micro is default"
+	}
+}
+
+
+"Resources" : {
+	"EC2Instance" : {
+		"Type" : "AWS::EC2::Instance",
+		"Properties" : {
+			"InstanceType" : { "Ref" : "InstanceTypeParameter"},
+			"ImageId" : "ami-xxxxx"
+		}
+	}
+	
+	}
+
+
+
+
+
+
+}}
